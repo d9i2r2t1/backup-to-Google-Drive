@@ -1,0 +1,15 @@
+# Если утилита запускается через Docker - все перечисленные папки должны быть проброшены в контейнер (-v при docker run)
+# Тогда, указывать пути к папкам относительно корня контейнера
+folders_for_backup:
+  - 'path_to_folder_1'
+  - 'path_to_folder_2'
+
+# Перечислить название папок, которые всегда исключаем из резервного копирования.
+# Например, venv, __pycache__ и т.д.
+exclude_folder_names:
+  - 'exclude_folder_name_1'
+  - 'exclude_folder_name_2'
+
+# Идентификатор директории на Google Диске, куда будут загружаться резервные копии.
+# Его можно найти в конце URL, открыв нужную папку на Google Диске.
+google_drive_backup_folder_id: 'your_google_drive_backup_folder_id'

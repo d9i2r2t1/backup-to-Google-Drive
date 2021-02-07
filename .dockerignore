@@ -1,0 +1,4 @@
+/backup_to_google_drive/__pycache__/
+/backup_to_google_drive/config.yml
+/backup_to_google_drive/.google_drive_token.json
+*.log
