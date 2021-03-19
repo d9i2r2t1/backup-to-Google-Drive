@@ -447,7 +447,8 @@ class ZipMaker(ConfigMixin):
 
 def make_backup(folder: str) -> str:
     """
-    Сделай бэкап папки, загрузи его на Google Drive, удали локальный бэкап.
+    Сделай бэкап папки, загрузи его на Google Drive,
+    удали локальный бэкап.
     :param folder: Путь к папке
     :return: ID загруженного на Google Drive файла
     """
