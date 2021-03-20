@@ -25,7 +25,8 @@ LOG_LEVEL = 'INFO'
 LOG_FILENAME = 'log.log'
 GOOGLE_DRIVE_TOKEN_FILENAME = '.google_drive_token.json'
 GOOGLE_DRIVE_TOKEN_FILEPATH = os.path.join(
-    os.path.dirname(__file__), GOOGLE_DRIVE_TOKEN_FILENAME)
+    os.path.dirname(__file__), GOOGLE_DRIVE_TOKEN_FILENAME
+)
 
 
 class SetLogging:
@@ -107,11 +108,13 @@ class SetLogging:
                 enqueue=True
             )
         if self.log_to_file:
-            log.add(self._create_log_file(),
-                    level=log_level,
-                    format=self.FILE_FORMATTER,
-                    enqueue=True,
-                    **self.log_to_file_kwargs)
+            log.add(
+                self._create_log_file(),
+                level=log_level,
+                format=self.FILE_FORMATTER,
+                enqueue=True,
+                **self.log_to_file_kwargs
+            )
 
     def _validate_log_level(self, log_level: str) -> None:
         """Провалидируй уровень логов."""
